@@ -16,7 +16,7 @@ function App() {
   const [error, setError] = useState("");
 
   const handleAuth = () => {
-    // window.location.replace("https://google-cal.onrender.com/rest/v1/calendar/init/");
+    
     window.location.replace("http://localhost:8000/rest/v1/calendar/init/");
   };
 
@@ -26,7 +26,7 @@ function App() {
     const code = urlParams.get("code");
 
     setIsLoading(true);
-    // var url = new URL("https://google-cal.onrender.com/rest/v1/calendar/redirect");
+   
     var url = new URL("http://localhost:8000/rest/v1/calendar/redirect");
     url.searchParams.append("code", code);
 
